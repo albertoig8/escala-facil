@@ -1,41 +1,42 @@
-// src/pages/Recepcao/Recepcao.js
 import React, { useEffect, useState } from 'react';
 import { List, ListItem, ListItemAvatar, ListItemText, Avatar } from '@mui/material';
-import { getAuth } from 'firebase/auth';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { auth } from '../../firebase';
 import './styles.css';
 
 const Recepcao = () => {
-    const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
+  const db = getFirestore();
+  const usersCollectionRef = collection(db, 'users');
 
-    useEffect(() => {
-        const fetchUsers = async () => {
-            const auth = getAuth();
-            const currentUser = auth.currentUser;
-            if (currentUser) {
-                setUsers([{
-                    displayName: currentUser.displayName,
-                    photoURL: currentUser.photoURL,
-                }]);
-            }
-        };
+  useEffect(() => {
+    const getUsers = async () => {
+      const querySnapshot = await getDocs(usersCollectionRef);
+      const users = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setUsers(users);
+    };
 
-        fetchUsers();
-    }, []);
+    getUsers();
+  }, []);
 
-    return (
-        <div className="recepcao-container">
-            <List>
-                {users.map((user, index) => (
-                    <ListItem key={index}>
-                        <ListItemAvatar>
-                            <Avatar src={user.photoURL} alt={user.displayName} />
-                        </ListItemAvatar>
-                        <ListItemText primary={user.displayName} />
-                    </ListItem>
-                ))}
-            </List>
-        </div>
-    );
+  return (
+    <div className="recepcao-container">
+      {users.length > 0 ? (
+        <List>
+          {users.map((user) => (
+            <ListItem key={user.id} className='recepcao-item-list'>
+              <ListItemAvatar>
+                <Avatar src={user.photoURL || 'https://via.placeholder.com/150'} alt={user.displayName || 'User Avatar'} />
+              </ListItemAvatar>
+              <ListItemText primary={user.displayName || 'Usuário sem nome'} />
+            </ListItem>
+          ))}
+        </List>
+      ) : (
+        <p>Nenhum usuário encontrado.</p>
+      )}
+    </div>
+  );
 };
 
 export default Recepcao;

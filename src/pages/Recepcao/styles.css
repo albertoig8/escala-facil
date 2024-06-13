@@ -1,0 +1,12 @@
+.recepcao-container{
+    background: #ffba3ab2;
+    height: 100vh;
+    padding: 8px;
+}
+
+.recepcao-item-list{
+    background: #fcf8e9;
+    margin: 4px 0;
+    border-radius: 8px;
+    color: #61594d;
+}
