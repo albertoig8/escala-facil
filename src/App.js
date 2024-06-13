@@ -5,6 +5,7 @@ import PrivateRoute from './components/PrivateRoute';
 import Header from './components/Header';
 import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
+import Recepcao from './pages/Recepcao';
 
 function App() {
     return (
