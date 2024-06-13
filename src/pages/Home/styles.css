@@ -1,0 +1,14 @@
+/* src/pages/Home/styles.css */
+.home-container {
+    padding: 20px;
+    background-color: #ffba3ab2;
+    height: 100vh;
+}
+
+.home-container .MuiCard-root {
+    transition: transform 0.3s;
+}
+
+.home-container .MuiCard-root:hover {
+    transform: scale(1.05);
+}
