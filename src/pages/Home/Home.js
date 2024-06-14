@@ -8,7 +8,8 @@ const Home = () => {
     { title: 'Sonoplastia', description: 'Escala para Sonoplastia', link: '/sonoplastia' },
     { title: 'Música', description: 'Escala para Música', link: '/musica' },
     { title: 'Mensageiros', description: 'Escala para Mensageiros', link: '/mensageiros' },
-    { title: 'Recepção', description: 'Escala para Recepção', link: '/recepcao' }
+    { title: 'Recepção', description: 'Escala para Recepção', link: '/recepcao' },
+    { title: 'Pessoas', description: 'Ver todas as pessoas', link: '/pessoas' }
   ];
 
   return (

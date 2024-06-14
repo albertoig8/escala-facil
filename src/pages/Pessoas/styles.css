@@ -1,0 +1,64 @@
+.usuario-container {
+    background: #ffba3ab2;
+    height: 100vh;
+    padding: 8px;
+}
+
+.usuario-buscar-por {
+    background: #ffffff7e;
+    border-radius: 8px;
+    border: none;
+}
+
+.usuario-item-list {
+    background: #fcf8e9;
+    margin: 4px 0;
+    border-radius: 8px;
+    color: #61594d;
+    display: flex;
+    padding: 8px;
+    flex: 1;
+}
+
+.usuario-item-container-name-email {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+}
+
+.usuario-item-email {
+    text-align: right;
+}
+
+.usuario-nao-encontrado__p {
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+    .usuario-container {
+        padding: 4px;
+    }
+
+    .usuario-buscar-por {
+        margin-bottom: 16px;
+    }
+
+    .usuario-item-list {
+        align-items: flex-start;
+        padding: 12px;
+        align-items: center;
+    }
+
+    .usuario-item-container-name-email {
+        width: 100%;
+        margin-bottom: 8px;
+        align-items: start;
+        text-align: left;
+        flex-direction: column;
+    }
+
+    .usuario-nao-encontrado__p {
+        font-size: 14px;
+    }
+}
