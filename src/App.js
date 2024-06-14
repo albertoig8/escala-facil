@@ -6,6 +6,9 @@ import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
 import Pessoas from './pages/Pessoas';
 import Sonoplastia from './pages/Sonoplastia';
+import Musica from './pages/Musica';
+import Mensageiros from './pages/Mensageiros';
+import Recepcao from './pages/Recepcao';
 
 function App() {
     return (
@@ -17,6 +20,9 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/pessoas" element={<Pessoas />} />
                     <Route path="/sonoplastia" element={<Sonoplastia />} />
+                    <Route path="/musica" element={<Musica />} />
+                    <Route path="/mensageiros" element={<Mensageiros />} />
+                    <Route path="/recepcao" element={<Recepcao />} />
                 </Route>
             </Routes>
         </div>
