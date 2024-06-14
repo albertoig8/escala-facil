@@ -45,14 +45,12 @@ const Pessoas = () => {
         <List>
           {filteredUsers.map((user) => (
             <div key={user.id} className='usuario-item-list'>
-              <div className='usuario-item-container-avatar-name'>
-                <ListItemAvatar>
-                  <Avatar src={user.photoURL} alt={user.displayName || 'User Avatar'} />
-                </ListItemAvatar>
+              <ListItemAvatar>
+                <Avatar src={user.photoURL} alt={user.displayName || 'User Avatar'} />
+              </ListItemAvatar>
+              <div className='usuario-item-container-name-email'>
                 <ListItemText primary={user.displayName || 'Usuário sem nome'} />
-              </div>
-              <div className='usuario-item-container-email'>
-                <ListItemText primary={user.email || ''} />
+                <ListItemText className='usuario-item-email' primary={user.email || ''} />
               </div>
             </div>
           ))}

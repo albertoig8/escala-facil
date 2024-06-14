@@ -16,15 +16,49 @@
     border-radius: 8px;
     color: #61594d;
     display: flex;
-    justify-content: space-between;
     padding: 8px;
+    flex: 1;
 }
 
-.usuario-item-container-avatar-name {
+.usuario-item-container-name-email {
     display: flex;
+    justify-content: space-between;
+    flex: 2;
+}
+
+.usuario-item-email {
+    text-align: right;
 }
 
 .usuario-nao-encontrado__p {
     color: #ffffff;
     text-align: center;
+}
+
+@media (max-width: 425px) {
+    .usuario-container {
+        padding: 4px;
+    }
+
+    .usuario-buscar-por {
+        margin-bottom: 16px;
+    }
+
+    .usuario-item-list {
+        align-items: flex-start;
+        padding: 12px;
+        align-items: center;
+    }
+
+    .usuario-item-container-name-email {
+        width: 100%;
+        margin-bottom: 8px;
+        align-items: start;
+        text-align: left;
+        flex-direction: column;
+    }
+
+    .usuario-nao-encontrado__p {
+        font-size: 14px;
+    }
 }
