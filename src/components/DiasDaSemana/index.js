@@ -85,7 +85,7 @@ const DiasDaSemana = () => {
             </div>
 
             {daysList.length > 0 ? (
-                <List>
+                <List className='list-dias-semana'>
                     {daysList.map((day, index) => (
                         <div key={index} className={`dias-semana-item-list ${getDayClass(day.dayOfWeek)}`}>
                             <div className="avatar-quadrado">
