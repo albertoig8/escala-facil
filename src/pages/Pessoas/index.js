@@ -58,7 +58,7 @@ const Pessoas = () => {
           ))}
         </List>
       ) : (
-        <p>Nenhum usuário encontrado.</p>
+        <p className='usuario-nao-encontrado__p'>Nenhuma pessoa encontrada.</p>
       )}
     </div>
   );

@@ -23,3 +23,8 @@
 .usuario-item-container-avatar-name {
     display: flex;
 }
+
+.usuario-nao-encontrado__p {
+    color: #ffffff;
+    text-align: center;
+}
