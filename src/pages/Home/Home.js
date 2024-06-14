@@ -1,4 +1,3 @@
-// src/pages/Home/Home.js
 import React from 'react';
 import { Grid, Card, CardContent, Typography, CardActionArea } from '@mui/material';
 import './styles.css';

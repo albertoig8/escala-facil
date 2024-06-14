@@ -1,0 +1,10 @@
+.sonoplastia-container {
+    padding: 16px;
+    text-align: center;
+    background: #ffba3ab2;
+    min-height: 100vh;
+}
+
+.sonoplastia-title {
+    color: #fcf8e9;
+}
