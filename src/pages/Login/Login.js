@@ -10,13 +10,14 @@ function Login() {
 
   const handleLoginSuccess = async () => {
     const user = auth.currentUser;
-    const { uid, displayName, photoURL } = user;
+    console.log(user);
+    const { uid, displayName, photoURL, email } = user;
 
-    await saveUserToFirestore(uid, displayName, photoURL);
+    await saveUserToFirestore(uid, displayName, photoURL, email);
     navigate('/');
   };
 
-  async function saveUserToFirestore(uid, displayName, photoURL) {
+  async function saveUserToFirestore(uid, displayName, photoURL, email) {
     const usersCollectionRef = collection(db, 'users');
     const userDocRef = doc(usersCollectionRef, uid);
     const userSnapshot = await getDoc(userDocRef);
@@ -26,6 +27,7 @@ function Login() {
         uid,
         displayName,
         photoURL,
+        email,
       });
     } else {
 

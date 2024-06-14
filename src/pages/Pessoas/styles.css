@@ -1,0 +1,25 @@
+.usuario-container {
+    background: #ffba3ab2;
+    height: 100vh;
+    padding: 8px;
+}
+
+.usuario-buscar-por {
+    background: #ffffff7e;
+    border-radius: 8px;
+    border: none;
+}
+
+.usuario-item-list {
+    background: #fcf8e9;
+    margin: 4px 0;
+    border-radius: 8px;
+    color: #61594d;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.usuario-item-container-avatar-name {
+    display: flex;
+}
