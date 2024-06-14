@@ -38,12 +38,25 @@
     margin-left: 16px;
     text-transform: uppercase;
     padding: 8px 0;
+    color: #fcf8e9;
 }
 
 .dias-semana-nao-encontrado__p {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
+}
+
+.sabado {
+    background-color: #6881A1;
+}
+
+.domingo {
+    background-color: #8B7E66;
+}
+  
+.quarta {
+    background-color: #575B61;
 }
 
 @media (max-width: 425px) {

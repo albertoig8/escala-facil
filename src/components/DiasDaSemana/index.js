@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { List, ListItemAvatar, ListItemText, Avatar, MenuItem, Select, FormControl, InputLabel } from '@mui/material';
-import { format, getDaysInMonth, setMonth, setYear } from 'date-fns';
+import { format, getDaysInMonth, setMonth } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import './styles.css';
 
@@ -23,7 +23,8 @@ const DiasDaSemana = () => {
             if (daysToInclude.includes(currentDay.getDay())) {
                 days.push({
                     day: i < 10 ? `0${i}` : i, // Adicionar zero se o dia for menor que 10
-                    weekDay: format(currentDay, 'EEEE', { locale: ptBR })
+                    weekDay: format(currentDay, 'EEEE', { locale: ptBR }),
+                    dayOfWeek: currentDay.getDay(),
                 });
             }
         }
@@ -36,6 +37,15 @@ const DiasDaSemana = () => {
 
     const handleYearChange = (event) => {
         setSelectedYear(event.target.value);
+    };
+
+    const getDayClass = (dayOfWeek) => {
+        switch (dayOfWeek) {
+            case 0: return 'domingo';
+            case 3: return 'quarta';
+            case 6: return 'sabado';
+            default: return '';
+        }
     };
 
     return (
@@ -77,12 +87,12 @@ const DiasDaSemana = () => {
             {daysList.length > 0 ? (
                 <List>
                     {daysList.map((day, index) => (
-                        <div key={index} className="dias-semana-item-list">
+                        <div key={index} className={`dias-semana-item-list ${getDayClass(day.dayOfWeek)}`}>
                             <div className="avatar-quadrado">
                                 {day.day}
                             </div>
                             <div className="dias-semana-item-container-name-day">
-                                <ListItemText primary={day.weekDay} />
+                                <ListItemText primary={day.weekDay.toUpperCase()} />
                             </div>
                         </div>
                     ))}
