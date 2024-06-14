@@ -71,6 +71,10 @@
         padding: 4px;
     }
 
+    .list-dias-semana{
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    }
+
     .filter-container-semana {
         flex-direction: column;
     }
