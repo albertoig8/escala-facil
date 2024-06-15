@@ -41,11 +41,25 @@
 
 .dias-semana-item-container-name-day {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin-left: 16px;
     text-transform: uppercase;
     padding: 8px 0;
     color: #fcf8e9;
+    width: 100%;
+}
+
+.dias-semana-nome-dia {
+    text-align: left;
+}
+
+.dias-semana-pessoas-selecionadas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
 }
 
 .dias-semana-nao-encontrado__p {
@@ -93,6 +107,13 @@
     .dias-semana-item-container-name-day {
         width: 100%;
         margin: 0;
+        flex-direction: column;
+    }
+
+    .container-dias-semana-pessoas-selecionadas {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
     }
 
     .dias-semana-nao-encontrado__p {
