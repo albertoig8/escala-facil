@@ -1,0 +1,51 @@
+/* Estilos CSS */
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-height: 80vh; /* Definindo altura máxima para o modal */
+    overflow-y: auto; /* Habilitando scroll vertical quando necessário */
+    background-color: #fcf8e9;
+    border: 2px solid #000;
+    box-shadow: 24px;
+    padding: 16px;
+    border-radius: 15px;
+  }
+  
+  .day-modal-title {
+    color: #8B7E66;
+  }
+  
+  .section-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    background: #8B7E66;
+    border-radius: 8px;
+    padding: 8px;
+    color: #fcf8e9;
+    font-weight: bold;
+  }
+  
+  .dia-modal-user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    background: #fcf8e9;
+    color: #8B7E66;
+    border-radius: 15px;
+    padding: 8px;
+  }
+  
+  .dia-modal-user-info span {
+    margin-left: 8px;
+    font-weight: 500;
+  }
+  
+  .user-list {
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+  
